@@ -4,10 +4,15 @@
  */
 package com.mycompany.taller5_g8;
 
+import java.time.LocalDate;
+
 /**
  *
  * @author maric
  */
-public class TareaConcreta implements Tarea {
- 
+public class TareaSimple implements Tarea {
+    private String asignacion;
+    private LocalDate fechaVence;
+    private int prioridad;
+    public TareaSimple(){}
 }
