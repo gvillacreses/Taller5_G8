@@ -41,5 +41,22 @@ public class Taller5_G8 {
         gestor.actualizarEstadoTarea(tareaFacade, "Vencida");
 
         gestor.listarTareas();
+
+        TareaFactory simpleFactory = new TareaSimpleFactory();
+        TareaFactory complejaFactory = new TareaComplejaFactory();
+
+        Tarea tarea1 = simpleFactory.crearTarea();
+        tarea1.setPrioridad(1);
+        tarea1.setEstado("En progreso");
+        ((TareaSimple) tarea1).setAsignacion("Asignación 1");
+
+        Tarea tarea2 = complejaFactory.crearTarea();
+        tarea2.setPrioridad(2);
+        tarea2.setEstado("Pendiente");
+        ((TareaCompleja) tarea2).setProyecto("Proyecto Final");
+
+        // Imprimir las tareas
+        System.out.println(tarea1);
+        System.out.println(tarea2);
     }
 }
