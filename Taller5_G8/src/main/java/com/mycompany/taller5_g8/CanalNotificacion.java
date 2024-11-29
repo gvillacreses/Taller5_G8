@@ -9,9 +9,9 @@ package com.mycompany.taller5_g8;
  * @author maric
  */
 public abstract class CanalNotificacion {
-    protected Tarea tarea;
+    protected CentroControl tarea;
 
-    public CanalNotificacion(Tarea tarea) {
+    public CanalNotificacion(CentroControl tarea) {
         this.tarea = tarea;
     }
 

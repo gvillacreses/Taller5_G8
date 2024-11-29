@@ -8,13 +8,6 @@ package com.mycompany.taller5_g8;
  *
  * @author maric
  */
-public class TareaConcreta extends Tarea {
-    private String nombre; 
-    public TareaConcreta(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getNombre() {
-        return nombre; 
-    }
+public class TareaConcreta implements Tarea {
+ 
 }

@@ -10,7 +10,7 @@ package com.mycompany.taller5_g8;
  */
 public class NotificacionEmail extends CanalNotificacion {
     
-    public NotificacionEmail(Tarea tarea) {
+    public NotificacionEmail(CentroControl tarea) {
         super(tarea);
         tarea.agregarCanal(this);
     }

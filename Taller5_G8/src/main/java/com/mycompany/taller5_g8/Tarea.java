@@ -4,38 +4,14 @@
  */
 package com.mycompany.taller5_g8;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  *
- * @author maric
+ * @author Anthony
  */
-public abstract class Tarea {
-    private String nombre;
-    private String estado;
-    protected List<CanalNotificacion> canales = new ArrayList<>(); 
+public interface Tarea{
+    int getPrioridad();
+    void setPrioridad(int prioridad);
 
-    public void agregarCanal(CanalNotificacion canal) {
-        canales.add(canal); 
-    }
-
-    public void eliminarCanal(CanalNotificacion canal) {
-        canales.remove(canal); 
-    }
-
-    public void setEstado(String estado) {
-        this.estado = estado;
-        notificarCanales(); 
-    }
-
-    public String getEstado() {
-        return estado; 
-    }
-
-    private void notificarCanales() {
-        for (CanalNotificacion canal : canales) {
-            canal.actualizar(); 
-        }
-    }
+    String getEstado();
+    void setEstado(String estado);
 }

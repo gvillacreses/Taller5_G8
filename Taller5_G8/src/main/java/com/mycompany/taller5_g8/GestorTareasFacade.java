@@ -9,7 +9,7 @@ package com.mycompany.taller5_g8;
  * @author Anthony
  */
 public class GestorTareasFacade{
-    private List<Tarea> tareas;
+    private List<CentroControl> tareas;
 
     public GestorTareasFacade(){
         this.tareas = new ArrayList<>();
@@ -21,7 +21,7 @@ public class GestorTareasFacade{
         return tarea;
     }
 
-    public void agregarCanalNotificacion(Tarea tarea, String tipoCanal){
+    public void agregarCanalNotificacion(CentroControl tarea, String tipoCanal){
         switch (tipoCanal.toLowerCase()){
             case "email":
             new NotificacionEmail(tarea);
@@ -34,17 +34,17 @@ public class GestorTareasFacade{
         }
     }
 
-    public void actualizarEstadoTarea(Tarea tarea, String nuevoEstado){
+    public void actualizarEstadoTarea(CentroControl tarea, String nuevoEstado){
         tarea.setEstado(nuevoEstado);
     }
 
-    public void eliminarCanalNotificacion(Tarea tarea, CanalNotificacion canal){
+    public void eliminarCanalNotificacion(CentroControl tarea, CanalNotificacion canal){
         tarea.eliminarcanal(canal);
     }
 
     public void listarTareas(){
         System.out.println("Tareas existentes: ");
-        for(Tarea tarea : tareas){
+        for(CentroControl tarea : tareas){
             System.out.println("-Tarea: " + ((TareaConcreta) tarea).getNombre() + ", Estado: " + tarea.getEstado());
         }
     }

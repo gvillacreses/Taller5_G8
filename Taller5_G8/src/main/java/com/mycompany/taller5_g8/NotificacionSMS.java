@@ -10,7 +10,7 @@ package com.mycompany.taller5_g8;
  */
 public class NotificacionSMS extends CanalNotificacion {
 
-     public NotificacionSMS(Tarea tarea) {
+     public NotificacionSMS(CentroControl tarea) {
         super(tarea);
         tarea.agregarCanal(this);
     }
