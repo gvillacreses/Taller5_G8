@@ -27,5 +27,19 @@ public class Taller5_G8 {
         // Elimina el canal de SMS y cambia solo al email
         tarea.eliminarCanal(sms);
         tarea.setEstado("Vencida");
+
+        TareaConcreta tareaFacade = gestor.crearTarea("Taller de DDS");
+
+        gestor.agregarCanalNotificacion(tareaFacade, "email");
+        gestor.agregarCanalNotificacion(tareaFacade, "sms");
+
+        gestor.actualizarEstadoTarea(tareaFacade, "Proxima a vencer");
+
+        gestor.listarTareas();
+
+        gestor.eliminarCanalNotificacion(tareaFacade, tarea.canales.get(1));
+        gestor.actualizarEstadoTarea(tareaFacade, "Vencida");
+
+        gestor.listarTareas();
     }
 }
