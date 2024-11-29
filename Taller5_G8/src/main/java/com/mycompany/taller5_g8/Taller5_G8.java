@@ -58,5 +58,19 @@ public class Taller5_G8 {
         // Imprimir las tareas
         System.out.println(tarea1);
         System.out.println(tarea2);
+
+        EstiloVisualizacion lista = new ListaVisualizacion();
+        EstiloVisualizacion tablero = new TableroVisualizacion();
+        EstiloVisualizacion calendario = new CalendarioVisualizacion();
+
+        PreferenciaVisualizacion preferencia = new PreferenciaVisualizacion(lista);
+
+        preferencia.verTareas();
+
+        preferencia.setEstiloVisualizacion(tablero);
+        preferencia.verTareas();
+
+        preferencia.setEstiloVisualizacion(calendario);
+        preferencia.verTareas();
     }
 }
